@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+     font-family: "Roboto Slab", serif;
+ 
+}
+.header{
+  margin-top: 30px;
+  /* border: 2px solid green; */
+
+}
+.header-content{
+    max-width: 1200px;
+    border: 2px solid rgb(236, 234, 234);
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+    /* box-shadow: 0px 0px 2px blue; */
+    padding: 10px 0px;
+}
+@media screen {
+    
+}
+.header-content:hover{
+    box-shadow: 0px 0px 1px 1px blue;
+
+}
+.image-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 2px solid rgb(56, 9, 117); */
+    gap: 10px;
+}
+
+#penlogo{
+    mix-blend-mode: multiply;
+}
+.pen-logo{
+    width: 30px;
+    height: 30px;
+    /* border: none; */
+    /* border: 2px solid rgb(172, 62, 62); */
+
+}
+.logo-heading{
+    /* border: 2px solid rgb(172, 62, 62); */
+    font-size: 20px;
+    font-weight: 900;
+
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+@media (max-width:580px) {
+    
+.navbar{
+ 
+    display:none;
+}
+    
+}
+.navbar li {
+    list-style: none;
+
+}
+ .btn{
+    background-color: blue;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 7px;
+ } 
