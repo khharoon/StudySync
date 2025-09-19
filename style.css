@@ -79,7 +79,7 @@ body{
   flex-direction: row;
   gap: 10px;
 }
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .navbar {
     display: none;
   }
@@ -106,6 +106,7 @@ body{
   font-size: 1rem;
   font-weight: 500;
 }
+
 @media (max-width: 580px) {
   .contact-btn {
     display: none;
@@ -114,6 +115,7 @@ body{
 
 .contact-btn:hover {
   background-color: #8284fa;
+
 }
 /* this menu-button */
 .menu-button {
@@ -142,7 +144,7 @@ body{
 .Content {
   /* border: 2px solid rgb(172, 62, 62); */
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 .main-section {
   display: flex;
@@ -157,7 +159,7 @@ body{
 .content-left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   justify-content: start;
   padding: 50px 0px;
   margin: 0px 25px;
@@ -183,6 +185,9 @@ body{
   font-size: 1.1rem;
   font-weight: 600;
   justify-content: start;
+  /* border: 2px solid rgb(121, 14, 221); */
+ margin-top: 30px;
+
 
  /* border:2px solid black; */
 }
@@ -193,6 +198,9 @@ body{
   width: 80%;
   justify-content: start;
  /* border:2px solid black; */
+  margin-top:10px;
+  /* border: 2px solid rgb(121, 14, 221); */
+
 
 }
 .section-description{
@@ -200,6 +208,8 @@ body{
   font-size: 1.22rem;
   width: 90%;
   justify-content: start;
+ margin-top: 20px;
+
 }
 
 
@@ -432,13 +442,13 @@ border-radius: 1.25rem;
 }
 
 
-/* #### End style for main section ##### */
+/* ############# End style for main section ########### */
 
 
 
 
 
-/* ########## grid style ############ */
+/* ########## popular company grid style ############ */
 
 .grid-container{
   display: flex;
@@ -447,7 +457,20 @@ border-radius: 1.25rem;
   margin: 20px;
   gap: 10px;
   /* border: 1px solid yellow; */
+  animation: gridslidefromlift 1s ease-in forwards;
+  opacity: 0;
 }
+@keyframes gridslidefromlift {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .grid-heading{
   font-size: 1.5rem;
   font-weight: 600;
@@ -475,6 +498,17 @@ border-radius: 0.65rem;
   /* color:rgb(168, 167, 167); */
 }
 
+@keyframes slidefromright {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (min-width:600px) {
   .company-grid{
     grid-template-columns: repeat(4,1fr);
@@ -483,5 +517,242 @@ border-radius: 0.65rem;
   .grid-heading{
   font-size: 1.8rem;
   font-weight: 600;
+}
+}
+
+/* ########## end of  popular company grid style ############ */
+
+/* ####### style for grid description ############# */
+.main-grid-card-container{
+  /* border: 2px solid rgb(121, 14, 221); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 10px 50px 10px;
+  background-color: var(--light-gray);
+
+}
+.grid-card-heading-pera{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  /* border: 2px solid rgb(121, 14, 221); */
+  max-width: 800px;
+  margin-top: 20px;
+
+
+}
+.grid-card-heading{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 5px ;
+}
+.grid-card-pera{
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px;
+}
+.grid-descreption-element{
+ display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid rgb(121, 14, 221);
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+.grid-element{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  /* border: 2px solid rgb(121, 14, 221); */
+  border-radius: 0.5rem;
+}
+.element-heading{
+  font-size: 1.2rem;
+  font-weight: 600;
+
+}
+.element-pera{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.icon{
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.grid-item-one{
+  background-color:#4a90e2;
+}
+
+.grid-item-two{
+  background-color:#ff6289;
+
+}
+
+.grid-item-three{
+  background-color:#fcbf58;
+}
+
+.grid-item-four{
+  background-color: #44bfc3;
+}
+
+.grid-item-five{
+  background-color:#77b05d;
+}
+
+.grid-item-six{
+  background-color:#7b78b1;
+}
+
+@media (min-width:600px) {
+  .grid-descreption-element{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .element-heading{
+  font-size: 1.3rem;
+  font-weight: 600;
+
+}
+
+}
+
+/* ####### testimonal style ######## */
+.testimonial-section{
+  border: 2px solid rgb(121, 14, 221);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 10px 50px 10px;
+  background-color:var(--background-color)
+}
+
+.testimonial-heading-pera {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  /* border: 2px solid rgb(121, 14, 221); */
+  max-width: 800px;
+  margin-top: 20px;
+}
+.testimonial-heading{
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px ;
+}
+.testimonial-pera{
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px;
+}
+.testimonial-cards-container{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  /* border: 2px solid rgb(121, 14, 221); */
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+  
+}
+.testimonial-user-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-user-info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+}
+.testimonial-text{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.testimonial-user-name{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--link-color);
+}
+.testimonial-user-role{
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+@media (min-width:800px) {
+  .testimonial-cards-container{
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1100px;
+    }
+
+  .testimonial-text{
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.testimonial-user-name{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--link-color);
+}
+.testimonial-user-role{
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+.testimonial-heading{
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 5px ;
+}
+.testimonial-pera{
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 20px;
 }
 }
